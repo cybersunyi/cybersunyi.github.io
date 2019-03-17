@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>CYBERSUNYI</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript" src="src/lib/js/pageActions.js"></script>
 		<link rel="stylesheet" type="text/css" href="src/lib/css/main-style.css">
 		<link rel="stylesheet" type="text/css" href="src/lib/css/glitch-effect.css">
@@ -20,12 +20,20 @@
 				<table id="main-table">
 					<tbody>
 						<tr>
-							<td id="left-home-image" onclick="moveImage(this.parentNode.parentNode.parentNode, 'right')">
+							<td id="left-home-image">
 								<img id="left-img" class="main-page-imgs desaturate switch-image" src="src/lib/imgs/home-left.jpg"/>
 							</td>
-							<td id="right-home-image" onclick="moveImage(this.parentNode.parentNode.parentNode, 'left')">
+							<td id="right-home-image">
 								<img class="main-page-imgs desaturate switch-image example-three" src="src/lib/imgs/home-right.jpg"/>
 							</td>
+							<script type="text/javascript">
+								$('#left-home-image').click(function() {
+									moveImage(this, 'right');
+								});
+								$('#right-home-image').click(function() {
+									moveImage(this, 'left');
+								});
+							</script>
 						</tr>
 					</tbody>
 				</table>

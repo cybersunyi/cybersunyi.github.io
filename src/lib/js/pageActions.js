@@ -1,8 +1,8 @@
 var side = '';
 
 function moveImage(img, imgSide) {
-  var id = '#' + img.id;
-  console.log("img-side: " + imgSide + " " + "side: " + side);
+  var imgObject = img.parentNode.parentNode.parentNode;
+  var id = '#' + imgObject.id;
   if(imgSide === 'left' && side === '') {
     $(id).animate({
       marginRight: 675 + "px"
