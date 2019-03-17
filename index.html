@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>SUNYI</title>
+		<meta charset="utf-8">
+		<title>CYBERSUNYI</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script type="text/javascript" src="JS/teste.js"></script>
-		<link rel="stylesheet" type="text/css" href="/Public/main.css">
+		<link rel="stylesheet" type="text/css" href="src/lib/css/main-style.css">
+		<link rel="stylesheet" type="text/css" href="src/lib/css/glitch-effect.css">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Monoton|Press+Start+2P|VT323" rel="stylesheet">
 	</head>
 	<body>
 		<div id="home-wrapper">
@@ -13,19 +16,20 @@
 				<table id="main-table">
 					<tbody>
 						<tr>
-							<td>
-								<img class="main-page-imgs" src="src/lib/imgs/home-left.png"/>
+							<td id="left-home-image">
+								<img class="main-page-imgs desaturate switch-image" src="src/lib/imgs/home-left.png"/>
 							</td>
-							<td>
-								<img class="main-page-imgs" src=""/>
-							</td>
-							<td>
-								<img class="main-page-imgs" src="src/lib/imgs/home-right.png"/>
+							<td id="right-home-image">
+								<img class="main-page-imgs desaturate switch-image example-three" src="src/lib/imgs/home-right.png"/>
+								<div class="text-logo glitch-text">
+									SUNYI
+								</div>
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-		</body>
-	</html>
+		</div>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	</body>
+</html>
