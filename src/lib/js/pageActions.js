@@ -1,4 +1,5 @@
 var side = '';
+var JSON_FILE = null;
 
 function moveImage(img, imgSide) {
   var imgObject = img.parentNode.parentNode.parentNode;
@@ -10,7 +11,9 @@ function moveImage(img, imgSide) {
     $('.text-logo').animate({
       marginTop: 290 + "px",
       marginLeft: 340 + "px",
-      fontSize: 70 + "px"
+      fontSize: 70 + "px",
+      content: "main_text",
+      visibility: "hidden"
     }, 500);
     side = 'isLeft';
     return true;
@@ -23,7 +26,9 @@ function moveImage(img, imgSide) {
     $('.text-logo').animate({
       marginTop: 290 + "px",
       marginLeft: -340 + "px",
-      fontSize: 70 + "px"
+      fontSize: 70 + "px",
+      content: "main_text",
+      visibility: "hidden"
     }, 500);
     side = 'isRight';
     return true;
@@ -41,4 +46,11 @@ function moveImage(img, imgSide) {
     side = '';
     return true;
   }
+}
+
+function loadJson(jsonToLoad, idToFill) 
+{
+  $.getJSON(jsonToLoad, {}, function(data) {
+    $(idToFill).html(data["1"]);
+  });
 }
